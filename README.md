@@ -1,0 +1,1 @@
+Dockerized async video-captioning agent: ffmpeg keyframes->dual Gemini vision models describe scenes->rotating pool (Groq Llama, Mistral, Gemini Flash) writes 4 caption styles.Queue-based concurrency,retry/backoff, free-tier limits,10-min runtime budget.
