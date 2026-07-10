@@ -19,10 +19,5 @@ COPY app/ ./app/
 COPY models_config.json .
 
 # API keys — replace with your actual keys before building
-ENV GEMINI_API_KEY_1=xyz
-ENV GEMINI_API_KEY_2=xyz
-ENV GEMINI_API_KEY_3=xyz
-ENV GROQ_API_KEY=xyz
-ENV MISTRAL_API_KEY=xyz
 
 CMD ["python", "-m", "app.main"]
