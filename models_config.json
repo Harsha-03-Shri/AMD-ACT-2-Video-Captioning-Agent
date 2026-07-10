@@ -1,0 +1,34 @@
+{
+  "description_models": [
+    {
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "api_key_env": "GEMINI_API_KEY_1"
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "api_key_env": "GEMINI_API_KEY_2"
+    }
+  ],
+  "caption_models": [
+    {
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "api_key_env": "GROQ_API_KEY",
+      "cooldown_seconds": 5
+    },
+    {
+      "provider": "mistral",
+      "model": "mistral-small-latest",
+      "api_key_env": "MISTRAL_API_KEY",
+      "cooldown_seconds": 5
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-lite",
+      "api_key_env": "GEMINI_API_KEY_3",
+      "cooldown_seconds": 5
+    }
+  ]
+}
