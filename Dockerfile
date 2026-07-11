@@ -15,9 +15,24 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY app/ ./app/
 
+# Server-mode API wrapper (Render) — lives at workspace root alongside app/
+COPY app_server.py .
+
 # Copy model configuration
 COPY models_config.json .
 
 # API keys — replace with your actual keys before building
 
-CMD ["python", "-m", "app.main"]
+
+
+# Default mount points for batch mode
+RUN mkdir -p /input /output
+ 
+ENV PYTHONUNBUFFERED=1
+ 
+COPY docker-entrypoint.sh .
+RUN chmod +x docker-entrypoint.sh
+ 
+EXPOSE 8000
+ENTRYPOINT ["./docker-entrypoint.sh"]
+ 
